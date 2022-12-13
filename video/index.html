@@ -114,11 +114,20 @@
       var utm_medium = new URL(document.location).searchParams.get("utm_medium");
 
       function redirect() {
+        if (geoplugin_currencyCode() == 'EUR') {
+          location.href = "https://oelez.systeme.io/mdlv-checkout-eur?tk=XBR-MDLV19-"+utm_source+"-"+utm_campaign+"-"+utm_medium+"-"+utm_content;
+        } else if (geoplugin_currencyCode() == 'COP') {
+          location.href = "https://oelez.systeme.io/mdlv-checkout-cop?tk=XBR-MDLV19-"+utm_source+"-"+utm_campaign+"-"+utm_medium+"-"+utm_content;
+        } else {
+          location.href = "https://oelez.systeme.io/mdlv-checkout?tk=XBR-MDLV19-"+utm_source+"-"+utm_campaign+"-"+utm_medium+"-"+utm_content;
+        }
+
+
         // fbq('track', 'ViewContent');
 
-        let htmt_pid = "A76957340T";
-        let htmt_off = "pe76fv1q";
-        location.href = "https://pay.hotmart.com/" + htmt_pid + "?off="+htmt_off+"&checkoutMode=10&split=12&utm_source="+utm_source+"&utm_campaign="+utm_campaign+"&utm_medium="+utm_medium+"&utm_content="+utm_content+"&sck=XDS-MDLV19-"+utm_source+"-"+utm_campaign+"-"+utm_medium+"-"+utm_content;
+        // let htmt_pid = "A76957340T";
+        // let htmt_off = "pe76fv1q";
+        // location.href = "https://pay.hotmart.com/" + htmt_pid + "?off="+htmt_off+"&checkoutMode=10&split=12&utm_source="+utm_source+"&utm_campaign="+utm_campaign+"&utm_medium="+utm_medium+"&utm_content="+utm_content+"&sck=XDS-MDLV19-"+utm_source+"-"+utm_campaign+"-"+utm_medium+"-"+utm_content;
       }
 
 
