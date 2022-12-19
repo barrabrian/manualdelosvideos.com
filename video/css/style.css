@@ -37,15 +37,38 @@ u{text-decoration-color:yellow;cursor:pointer}
   margin: 0 auto;
 }
 
+section {
+  padding: 5em 0px 7em 0px;
+}
+
 main {
-    padding: 5em 0px 10em 0px;
+    padding: 5em 0px 7em 0px;
     background-size: cover;
     background-position: bottom center;
     background-attachment: fixed;
-    border-bottom: solid 1px #191c24;
     /* background-color: #10051a; */
     background: linear-gradient(135deg, #1f2431, #10051a 50%);
     /* background-image: url("http://k8s-square-empiricus-assets.s3-website-us-east-1.amazonaws.com/prd/2021/c/LlABqLWobAs8zgh6vKtgArfDl4jImVApQKue8yhg.jpg") !important; */
+}
+
+.bonus-hl span{
+  color: #ffe300;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+
+.row {
+  display: flex;
+  border: solid 2px #191c24;
+  border-radius: 5px;
+  padding: 1em;
+}
+.row .col{
+  padding-left: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 991px) {
@@ -55,10 +78,15 @@ main {
 }
 
 .wrapper {
-    width: 60%;
-    max-width: 840px;
-    margin: 0 auto;
-    position:relative
+  width: 60%;
+  max-width: 840px;
+  margin: 0 auto;
+  position:relative
+}
+
+section .wrapper{
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -87,8 +115,12 @@ main {
       padding: 20px 10px !important;
     }
     main {
-        background-attachment:initial;
-        padding: 1em 0px 10em 0px;
+      background-attachment:initial;
+      padding: 1em 0px 5em 0px;
+    }
+
+    section {
+      padding: 4em 0px 5em 0px;
     }
 
     main .wrapper {
@@ -123,7 +155,30 @@ main {
     .small-mobile {
       font-size: .8em;
     }
+
+    .bonus-hl {
+      font-size: 1.4em;
+    }
+
+    .bonus-hl span{
+      font-size: 1.3em;
+      line-height: 1.2em;
+    }
+
+    .row {
+      display: block;
+      margin-bottom: 2em;
+    }
+
+    .row .col{
+      padding-left: 0;
+      padding-top: 1em;
+      text-align: center;
+    }
 }
+
+
+
 
 h1,h2,h3,p,ul li,ol li{margin:0 auto 1.7rem;font-weight:300;letter-spacing:0.03rem}
 
@@ -132,15 +187,23 @@ h1{font-size:2em;font-weight:700;line-height:1.2em}
 h1 span{font-weight:300;font-size:0.55em;line-height:1.2rem;margin-bottom:0.5rem;display:block}
 
 h2{
-  /* font-size:1.6em; */
+  font-size:1.8em;
   line-height:1.3em
 }
 
-h3{font-size:1.35em;line-height:1.4em}
+h3{font-size:1.35em;line-height:1.4em; margin: 0;}
+
+.h3-green h3{
+  color: green;
+}
+
+.h3-red h3 {
+  color: red;
+}
 
 p,ul li,ol li{font-size:1em;line-height:1.35em}
 
-footer{width:100%;background-color:#10051a;color:#9298ad;font-weight:300;margin:0 auto;padding:1rem;text-align:center}
+footer{width:100%;background-color:#10051a;color:#9298ad;font-weight:300;margin:0 auto;padding:1rem;text-align:center;border-top: solid 1px #191c24;}
 
 footer .logoOelez{width:60px;margin:0 auto 22px}
 
